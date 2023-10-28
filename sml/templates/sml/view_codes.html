@@ -9,8 +9,9 @@
     <a href="{% url 'home' %}">Back home</a>
     <div class="container">
         <div class="code-list-view">
-            {% for encoded in all_codes %}
             <ol>
+            {% for encoded in all_codes %}
+            <div style="margin: 1%;">
                 <li>
                     <div>
                         Website - <strong>{{ encoded.name }}</strong>
@@ -22,8 +23,9 @@
                         encoded: {{ encoded.short_code|safe }}
                     </div>
                 </li>
+            </div>
+                {% endfor %}
             </ol>
-            {% endfor %}
         </div>
     </div>
     <div>
